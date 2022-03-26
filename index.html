@@ -2,16 +2,14 @@
 <html>
    <head>
       <base href="https://www.w3schools.com/" target="_blank">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
       <style>
          body {
          margin: 0px;
          padding: 0px;
-/*          overflow: hidden;
+         overflow: hidden;
          background: -moz-linear-gradient(-45deg, #ffe0e3 32%, #a7e0e5 68%);
          background: -webkit-linear-gradient(-45deg, #ffe0e3 32%, #a7e0e5 68%);
-         background: linear-gradient(135deg, #ffe0e3 32%, #a7e0e5 68%); */
+         background: linear-gradient(135deg, #ffe0e3 32%, #a7e0e5 68%);
          }
          html {
          margin: 0px;
@@ -332,14 +330,16 @@
    </head>
    <body>
       <div class="container">
-         <div class="card">
-            <div class="name">ALISA </div>
+         <div class="card" onclick="klikaj('rad1')">
+            <div class="name">ALISA</div>
             <div class="title">MIROSHNICHENKO</div>
             <hr/>
-            <div class="title">Head of Design</div>
-            <div class="title"><a href="https://t.me/+Tqs5iuS1KUw3NDJk">tg: @miiirosha</a></div>
+            <div class="title">Graphic Designer</div>
+            <div class="email">Click on card</div>
             <div class="phone">+420 605 924 006</div>
+            
             <div class="card-back"></div>
+            
             <div class="card-front"></div>
             <div class="card2">
                <div class="card-pink"></div>
@@ -354,5 +354,10 @@
       <div class="circle6"></div>
       <div class="circle7"></div>
       <div class="circle8">  </div>
+      <script>
+        function klikaj(i) {
+        location.href = 'https://t.me/miiirosha_art';
+        }
+</script>
    </body>
 </html>
