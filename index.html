@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         body {
+         margin: 0px;
+         padding: 0px;
+         
+         background: -webkit-linear-gradient(-45deg, #ffe0e3 100%, #a7e0e5 100%);
+         }
+         html {
+         margin: 0px;
+         padding: 0px;
+         }
+         * {
+         letter-spacing: 1px;
+         font-family: Arial;
+         color: white;
+         }
+         .container {
+         margin: 90px auto 300px auto;
+         position: relative;
+         }
+         @keyframes card-ani1 {
+         0% {
+         opacity: 0;
+         transform: translateX(30px) translateY(30px);
+         }
+         100% {
+         opacity: 1;
+         transform: translateX(0px) translateY(0px);
+         }
+         }
+         @keyframes card-ani2 {
+         0% {
+         opacity: 0;
+         transform: translateX(0px) translateY(50px);
+         }
+         100% {
+         opacity: 1;
+         transform: translateX(0px) translateY(0px);
+         color: #9B9B9B;
+         }
+         }
+         .portfolio {
+         	aligin-center: 0px auto 0px auto;
+            text-align: center;
+         }
+         .pic {
+         	width: 300px;
+         }
+         .container .card {
+         width: 165px;
+         height: 280px;
+         padding: 30px;
+         border-radius: 10px;
+         margin: 80px auto 50px auto;
+         background-color: white;
+         animation: card-ani1 1s;
+         transition-delay: 1s;
+         transition-timing-function: easeOutCirc;
+         position: relative;
+         }
+         .container .card .name {
+         font-size: 28px;
+         margin: 15px auto 0px auto;
+         animation: card-ani2 1s;
+         animation-delay: 0s;
+         animation-fill-mode: forwards;
+         }
+         .container .card hr {
+         border: 0;
+         height: 1px;
+         background-color: #d4d4d4;
+         animation: card-ani2 1s;
+         animation-delay: 0.1s;
+         animation-fill-mode: forwards;
+         }
+         .container .card .title {
+         font-size: 14px;
+         animation: card-ani2 1s;
+         animation-delay: 0.3s;
+         animation-fill-mode: forwards;
+         }
+         .container .card .email {
+         font-size: 14px;
+         margin: 160px auto 6px auto;
+         animation: card-ani2 1s;
+         animation-delay: 0.4s;
+         animation-fill-mode: forwards;
+         }
+         .container .card .phone {
+         font-size: 14px;
+         animation: card-ani2 1s;
+         animation-delay: 0.6s;
+         animation-fill-mode: forwards;
+         }
+         @keyframes card-ani3 {
+         0% {
+         opacity: 0;
+         transform: translateX(-60px) translateY(-60px);
+         }
+         100% {
+         opacity: 0.5;
+         transform: translateX(0px) translateY(0px);
+         }
+         }
+         .container .card .card-back {
+         width: 160px;
+         height: 275px;
+         padding: 30px;
+         border-radius: 10px;
+         margin: -286px 0px 0px -8px;
+         background-color: white;
+         z-index: -1;
+         position: relative;
+         opacity: 0.5;
+         animation: card-ani3 1s;
+         transition-delay: 10s;
+         transition-timing-function: easeOutCirc;
+         }
+         @keyframes card-ani4 {
+         0% {
+         opacity: 0;
+         transform: translateX(50px) translateY(50px);
+         }
+         100% {
+         opacity: 1;
+         transform: translateX(0px) translateY(0px);
+         }
+         }
+         .container .card .card-front {
+         width: 165px;
+         height: 275px;
+         padding: 30px;
+         border-radius: 10px;
+         margin: -373px 0px 0px -49px;
+         background-color: transparent;
+         border: solid 2px white;
+         z-index: -1;
+         position: relative;
+         animation: card-ani4 1s;
+         transition-delay: 6s;
+         animation-timing-function: easeOutCirc;
+         }
+         .container .card .card2 {
+         width: 165px;
+         height: 280px;
+         padding: 30px;
+         border-radius: 10px;
+         margin: -323px auto 0px -30px;
+         background-color: transparent;
+         overflow: hidden;
+         position: relative;
+         animation: card-ani4 1s;
+         transition-delay: 6s;
+         animation-timing-function: easeOutCirc;
+         }
+         .container .card .card2 .card-pink {
+         width: 165px;
+         height: 275px;
+         padding: 30px;
+         border-radius: 10px;
+         margin: -46px 0px 0px -49px;
+         background-color: transparent;
+         border: solid 2px #FFE0E3;
+         position: relative;
+         }
+         @keyframes circle-ani1 {
+         0% {
+         transform: translateX(0px) translateY(0px);
+         }
+         20% {
+         transform: translateX(20px) translateY(-10px);
+         }
+         40% {
+         transform: translateX(-10px) translateY(-30px);
+         }
+         60% {
+         transform: translateX(-20px) translateY(-10px);
+         }
+         80% {
+         transform: translateX(10px) translateY(10px);
+         }
+         100% {
+         transform: translateX(0px) translateY(0px);
+         }
+         }
+         @keyframes circle-ani2 {
+         0% {
+         transform: translateX(20px) translateY(0px);
+         }
+         20% {
+         transform: translateX(-10px) translateY(20px);
+         }
+         40% {
+         transform: translateX(0px) translateY(-10px);
+         }
+         60% {
+         transform: translateX(20px) translateY(0px);
+         }
+         80% {
+         transform: translateX(-10px) translateY(20px);
+         }
+         100% {
+         transform: translateX(20px) translateY(0px);
+         }
+         }
+         @keyframes circle-ani3 {
+         0% {
+         transform: translateX(-30px) translateY(10px);
+         }
+         20% {
+         transform: translateX(-10px) translateY(0px);
+         }
+         40% {
+         transform: translateX(0px) translateY(-20px);
+         }
+         60% {
+         transform: translateX(20px) translateY(10px);
+         }
+         80% {
+         transform: translateX(15px) translateY(-20px);
+         }
+         100% {
+         transform: translateX(-30px) translateY(10px);
+         }
+         }
+         .circle1 {
+         width: 500px;
+         height: 500px;
+         background-color: white;
+         border: 0;
+         opacity: 0.3;
+         position: absolute;
+         border-radius: 100%;
+         bottom: -254px;
+         left: -255px;
+         animation: circle-ani1 10s infinite;
+         animation-timing-function: linear;
+         }
+         .circle2 {
+         width: 120px;
+         height: 120px;
+         background-color: white;
+         border: 0;
+         opacity: 0.5;
+         position: absolute;
+         border-radius: 100%;
+         bottom: 214px;
+         left: -69px;
+         animation: circle-ani2 10s infinite;
+         animation-timing-function: linear;
+         }
+         .circle3 {
+         width: 30px;
+         height: 30px;
+         background-color: white;
+         border: 0;
+         opacity: 0.6;
+         position: absolute;
+         border-radius: 100%;
+         top: 183px;
+         left: 78px;
+         animation: circle-ani3 10s infinite;
+         animation-timing-function: linear;
+         }
+         .circle4 {
+         width: 220px;
+         height: 220px;
+         background-color: transparent;
+         border: solid 2px white;
+         opacity: 0.6;
+         position: absolute;
+         border-radius: 100%;
+         bottom: -100px;
+         left: 100px;
+         animation: circle-ani3 10s infinite;
+         animation-timing-function: linear;
+         }
+         .circle5 {
+         width: 50px;
+         height: 50px;
+         background-color: white;
+         border: 0;
+         opacity: 0.5;
+         position: absolute;
+         border-radius: 100%;
+         bottom: 30px;
+         left: 298px;
+         animation: circle-ani2 10s infinite;
+         animation-timing-function: linear;
+         }
+         .circle6 {
+         width: 300px;
+         height: 300px;
+         background-color: transparent;
+         border: solid 2px white;
+         opacity: 0.6;
+         position: absolute;
+         border-radius: 100%;
+         top: -150px;
+         right: -80px;
+         animation: circle-ani3 10s infinite;
+         animation-timing-function: linear;
+         }
+         .circle7 {
+         width: 165px;
+         height: 165px;
+         background-color: white;
+         border: 0;
+         opacity: 0.45;
+         position: absolute;
+         border-radius: 100%;
+         top: 71px;
+         right: -106px;
+         animation: circle-ani1 10s infinite;
+         animation-timing-function: linear;
+         }
+         .circle8 {
+         width: 20px;
+         height: 20px;
+         background-color: white;
+         border: 0;
+         opacity: 0.7;
+         position: absolute;
+         border-radius: 100%;
+         top: 183px;
+         right: 78px;
+         animation: circle-ani2 10s infinite;
+         animation-timing-function: linear;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="card" onclick="klikaj('rad1')">
+            <div class="name">ALISA</div>
+            <div class="title">MIROSHNICHENKO</div>
+            <hr/>
+            <div class="title">Head of Design</div>
+            <div class="email">Click on card to contact</div>
+            
+            <div class="card-back"></div>
+            
+            <div class="card-front"></div>
+            <div class="card2">
+               <div class="card-pink"></div>
+            </div>
+         </div>
+         
+         <div class="portfolio">
+         <h1>Portfolio</h1>
+         	<h2>Business Cards</h2>
+         </div>
+         <div class="portfolio">         	
+            <img class="pic" style="height: 175px;" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0160.JPG?alt=media&token=f2f87688-a3d2-4187-a021-2ad1942d7dae">
+         </div>
+         
+         <div class="portfolio">
+         	<h1>Merch Design</h1>
+         </div>
+         
+         <div class="portfolio">         	
+            <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0163.JPG?alt=media&token=e93d9663-f637-4981-8767-683200726f5d">
+         </div>
+         
+         <div class="portfolio">
+         	<h1>Mazel Label Design</h1>
+         </div>
+         
+         <div class="portfolio">
+            <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/%D1%84%D0%B8%D0%BD%D1%87%D0%B8%D0%BA-1.png?alt=media&token=624cb62c-b2ef-4cc8-9c26-66461d038325">
+            <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/%D1%84%D0%B8%D0%BD%D1%87%D0%B8%D0%BA-2.png?alt=media&token=4681d52d-abbe-4a2b-9b6c-77d3be700963">
+         </div>
+         
+         <div class="portfolio">
+            <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/%D1%84%D0%B8%D0%BD%D1%87%D0%B8%D0%BA-3.png?alt=media&token=935b029b-fec3-403c-ac73-ecaa0733ba0c">
+            <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/%D1%84%D0%B8%D0%BD%D1%87%D0%B8%D0%BA-4.png?alt=media&token=b9f0692d-3216-4faa-a030-f29aac4edd43">
+         </div>
+         
+         <div class="portfolio">
+         	<h1>Stamps design</h1>
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0165.JPG?alt=media&token=1bcebded-2f57-4ba4-b8ca-204fe5d162e1">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0166.JPG?alt=media&token=d542ceee-224a-45d9-833c-c29f941a41e0">
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0167.JPG?alt=media&token=5c31bd0b-be57-4a2e-8550-434a6602ec3a">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0170.JPG?alt=media&token=332f5f93-3da6-4d5f-919f-2749ba5dd424">
+         </div>
+         
+         
+         <div class="portfolio">
+         	<h1>Event posters</h1>
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0192.JPG?alt=media&token=ee713d3b-e0df-497d-b665-c7174ce0677a">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0191.JPG?alt=media&token=cd4a77c5-7fc0-4308-8d09-119cfd022df2">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0189.JPG?alt=media&token=02fd6f8a-2523-4c2c-b236-fbb6fa1e13b8">
+         </div>
+         
+         
+         
+         
+         
+         <div class="portfolio">
+         	<h1>3kinofest posters </h1>
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/3.png?alt=media&token=b13e8d9e-a880-4c45-9596-e10df1c7e9e7">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/2.png?alt=media&token=00d054ec-db8a-41fa-956d-6f4adf060fc4">
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/8.jpg?alt=media&token=4d60d057-8ef6-416a-9f6e-769950916cf8">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/9.jpg?alt=media&token=ca69958d-e1f1-42f5-8dfb-37ad98da7e89">
+         </div>
+         
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/1%D0%B1%D0%B1.jpg?alt=media&token=51a2d92b-52f2-4b88-a95c-1aea59d19fbe">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/1%D0%B0%D0%B0.jpg?alt=media&token=14a913ec-d1a3-4b1a-8f16-45c0e04f6be7">
+         </div>
+         
+         <div class="portfolio">
+         	<h1>Kafka posters </h1>
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0171.JPG?alt=media&token=749c4ab6-22ca-4c5e-8f61-09c8a62ae1c6">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/kafka.jpg?alt=media&token=3d1d6b35-ea61-408c-8eea-ccecaff3f95b">
+         </div>
+         
+         <div class="portfolio">
+         	<h1>NFT bugs</h1>
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/1.jpg?alt=media&token=508c50ac-2329-4d07-bd69-33d542378c87">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/1%D0%B0.jpg?alt=media&token=0815a7be-c5c7-4f3a-9b3b-3f2b8e68ad08">
+         </div>
+         
+        
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0177.JPG?alt=media&token=5277f1a7-f910-4ffd-bd39-dc26d53033e1">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0173.JPG?alt=media&token=a1fa725d-c02f-46b3-b5e6-2dcd61550917">
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0176.JPG?alt=media&token=35ad02a1-84b8-4b4e-9e14-f95943f03180">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_0175.JPG?alt=media&token=bfc381ac-e855-4b71-ab75-c0ad91c78bdc">
+         </div>
+         
+         <div class="portfolio">
+         	<h1>Bitcoin sculpture</h1>
+         </div>
+         
+         <div class="portfolio">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_8521.JPG?alt=media&token=8b52cee7-dd6f-45c8-ac39-f87e2ec12224">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_8522.JPG?alt=media&token=b836ff1a-4cf4-4447-a8a2-e86a0122bb91">
+         <img class="pic" src="https://firebasestorage.googleapis.com/v0/b/copygeneral-f7c91.appspot.com/o/IMG_8523.JPG?alt=media&token=f0a3c875-d61b-433a-a06c-8c91893e1bc9">
+         </div>
+         
+         <div class="portfolio">
+         	<h1>Contact form</h1>
+         </div>
+         
+         <div class="portfolio">
+         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ1pMFKQDxAerVKkRmuzmhmcLASnCjp9g_2Bu4LhGbhvA8Eg/viewform?embedded=true" width="640" height="677" frameborder="0" marginheight="0" marginwidth="0">Načítání…</iframe>
+         
+         </div>
+         
+      </div>
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+      <div class="circle5"></div>
+      <div class="circle6"></div>
+      <div class="circle7"></div>
+      <div class="circle8">  </div>
+      <script>
+        function klikaj(i) {
+        location.href = 'https://t.me/miiirosha_art';
+        }
+</script>
+   </body>
+</html>
